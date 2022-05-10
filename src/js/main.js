@@ -35,11 +35,12 @@ function buildCoctails() {
     const idDrink = drink.idDrink;
 
     html += `<li class="listsearch">`;
-    html += `<div class="cocktails" id="${idDrink}"> ${nameDrink}`;
-    if (imageDrink === '') {
-      html += `<img class="image" src="https://via.placeholder.com/210x295/ffffff/666666/?text=C%C3%B3ctel" width="50">`;
+    html += `<div class="cocktails" id="${idDrink}">`;
+    html += `<h2>${nameDrink}</h2>`;
+    if (imageDrink === "") {
+      html += `<img class="image" src="https://via.placeholder.com/210x295/ffffff/666666/?text=C%C3%B3ctel">`;
     } else {
-      html += `<img class="image" src="${imageDrink}" width="50">`;
+      html += `<img class="image" src="${imageDrink}">`;
     }
 
     html += `</div>`;
@@ -82,7 +83,8 @@ function addFavorite(event) {
   const imageDrink = favoriteSelect.strDrinkThumb;
   const idDrink = favoriteSelect.idDrink;
   favHtml += `<li class="favorites">`;
-  favHtml += `<div class="cocktailsfavorites"> ${nameDrink}`;
+  favHtml += `<div class="cocktailsfavorites">`;
+  favHtml += `<h2>${nameDrink}</h2>`;
   favHtml += `<img class="image" src="${imageDrink}" width="50">`;
   favHtml += `<p class="selecdelete" id="fav-${idDrink}">x</p>`;
   favHtml += `</div>`;

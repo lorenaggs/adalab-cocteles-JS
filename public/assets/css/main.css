@@ -1,42 +1,52 @@
-* {
-  margin: 0;
-  list-style: none; }
-
 .main {
-  background-color: rgba(212, 182, 182, 0.559); }
+  background-color: #f1e4e4; }
 
 .search {
   color: #3cd1d1;
-  margin: 20px 0px; }
+  margin: 20px 0px;
+  text-align: center;
+  font-size: 35px; }
+
+.image {
+  width: 100px; }
+
+.inputsearch {
+  text-align: center;
+  font-size: 20px; }
 
 .input {
   width: 280px;
   height: 30px;
   border: 2px solid #3cd1d1;
-  background-color: rgba(212, 182, 182, 0.559); }
+  background-color: #f1e4e4;
+  font-size: 20px; }
 
 .button {
   background-color: #3cd1d1;
   color: white;
-  width: 60px;
-  height: 23px;
+  width: 100px;
+  padding: 5px;
   border: none;
   border-radius: 5px;
-  margin-left: 10px; }
+  margin-left: 10px;
+  font-size: 20px; }
 
 .cocktailsfavorites {
   display: flex;
   flex-direction: row;
   width: 200px;
   justify-content: space-around;
-  margin: 10px 0px; }
+  margin: 10px 0px;
+  font-size: 20px; }
 
 .listcocktails {
   display: flex;
-  margin-top: 20px; }
+  margin-top: 20px;
+  text-align: center; }
 
 .titlesearch {
-  background-color: white; }
+  background-color: white;
+  font-size: 25px; }
 
 .listfavorites {
   background-color: #1a1919;
@@ -70,7 +80,8 @@
 
 .titlefav {
   color: white;
-  background-color: #2d2020; }
+  background-color: #2d2020;
+  font-size: 25px; }
 
 .sectionfavorites {
   margin-right: 10px;
@@ -81,6 +92,10 @@
   padding: 0px; }
 
 .listsearch {
-  margin-top: 10px; }
+  margin-top: 10px;
+  list-style: none; }
+
+.sectionsearch {
+  width: 70%; }
 
 /*# sourceMappingURL=main.css.map */
