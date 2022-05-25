@@ -42,7 +42,6 @@ function buildCoctails() {
     } else {
       html += `<img class="image" src="${imageDrink}">`;
     }
-
     html += `</div>`;
     html += `</li>`;
   }
@@ -74,27 +73,33 @@ function addFavorite(event) {
     drinkslocalFav = [];
   }
 
-  drinkslocalFav.push(favoriteSelect);
-  localStorage.setItem("drinkslocalFav", JSON.stringify(drinkslocalFav));
+  const renderCoctelFav = drinkslocalFav.findIndex(
+    (x) => x.idDrink === idCocktailsSelect
+  );
+  // console.log(renderCoctelFav);
+  if (renderCoctelFav === -1) {
+    drinkslocalFav.push(favoriteSelect);
+    localStorage.setItem("drinkslocalFav", JSON.stringify(drinkslocalFav));
 
-  let favHtml = "";
+    let favHtml = "";
 
-  const nameDrink = favoriteSelect.strDrink;
-  const imageDrink = favoriteSelect.strDrinkThumb;
-  const idDrink = favoriteSelect.idDrink;
-  favHtml += `<li class="favorites">`;
-  favHtml += `<div class="cocktailsfavorites">`;
-  favHtml += `<h2>${nameDrink}</h2>`;
-  favHtml += `<div class="favimage">`;
-  favHtml += `<img class="image" src="${imageDrink}" width="50">`;
-  favHtml += `<p class="selecdelete" id="fav-${idDrink}">x</p>`;
-  favHtml += `</div>`;
-  favHtml += `</div>`;
-  favHtml += `</li>`;
+    const nameDrink = favoriteSelect.strDrink;
+    const imageDrink = favoriteSelect.strDrinkThumb;
+    const idDrink = favoriteSelect.idDrink;
+    favHtml += `<li class="favorites">`;
+    favHtml += `<div class="cocktailsfavorites">`;
+    favHtml += `<h2>${nameDrink}</h2>`;
+    favHtml += `<div class="favimage">`;
+    favHtml += `<img class="image" src="${imageDrink}">`;
+    favHtml += `<p class="selecdelete" id="fav-${idDrink}">x</p>`;
+    favHtml += `</div>`;
+    favHtml += `</div>`;
+    favHtml += `</li>`;
 
-  favoritesHtml.innerHTML += favHtml;
-  colorSelecFav(idDrink);
-  handleClickDelete();
+    favoritesHtml.innerHTML += favHtml;
+    colorSelecFav(idDrink);
+    handleClickDelete();
+  }
 }
 
 function colorSelecFav(idDrink) {
@@ -130,11 +135,12 @@ function deleteFavorite(event) {
     const imageDrink = drinks.strDrinkThumb;
     const idDrink = drinks.idDrink;
     favHtml += `<li class="favorites">`;
-    favHtml += `<div class="cocktailsfavorites"> ${nameDrink}`;
-    favHtml += `<span>`;
-    favHtml += `<img class="image" src="${imageDrink}" width="50">`;
-    favHtml += `<span class="selecdelete" id="fav-${idDrink}">x</span>`;
-    favHtml += `</span>`;
+    favHtml += `<div class="cocktailsfavorites">`;
+    favHtml += `<h2>${nameDrink}</h2>`;
+    favHtml += `<div class="favimage">`;
+    favHtml += `<img class="image" src="${imageDrink}">`;
+    favHtml += `<p class="selecdelete" id="fav-${idDrink}">x</p>`;
+    favHtml += `</div>`;
     favHtml += `</div>`;
     favHtml += `</li>`;
 
