@@ -11,42 +11,41 @@
   width: 100px; }
 
 .inputsearch {
+  display: flex;
   text-align: center;
-  font-size: 20px; }
+  justify-content: center; }
 
 .input {
-  width: 280px;
   height: 30px;
   border: 2px solid #3cd1d1;
   background-color: #f1e4e4;
-  font-size: 20px; }
+  font-size: 20px;
+  width: 140px; }
 
 .button {
   background-color: #3cd1d1;
   color: white;
-  width: 100px;
+  width: 60px;
   padding: 5px;
   border: none;
   border-radius: 5px;
   margin-left: 10px;
-  font-size: 20px; }
+  font-size: 15px; }
 
 .cocktailsfavorites {
   display: flex;
-  flex-direction: row;
-  width: 200px;
-  justify-content: space-around;
+  flex-direction: column-reverse;
+  align-items: center;
   margin: 10px 0px;
-  font-size: 20px; }
+  font-size: 20px;
+  box-shadow: #59d6e4 0px 2px 4px 0px; }
 
 .listcocktails {
   display: flex;
+  justify-content: center;
   margin-top: 20px;
-  text-align: center; }
-
-.titlesearch {
-  background-color: white;
-  font-size: 25px; }
+  text-align: center;
+  width: 100%; }
 
 .listfavorites {
   background-color: #1a1919;
@@ -56,10 +55,15 @@
 .selecdelete {
   align-content: center;
   color: white;
-  background-color: #2b2828;
+  background-color: red;
   border-radius: 90%;
+  width: 30px;
+  height: 30px;
   -webkit-margin-after: auto;
-  margin-block-end: auto; }
+  margin-block-end: auto;
+  position: absolute;
+  right: -6px;
+  top: -26px; }
 
 .selecfavo {
   border: solid 1px #3cd1d1;
@@ -72,20 +76,26 @@
   margin-left: 20px; }
 
 .cocktailssearch {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  border: white solid 1px;
+  display: flex;
   margin: 0px;
-  padding: 0px; }
+  padding: 0px;
+  flex-wrap: wrap;
+  justify-content: center; }
 
-.titlefav {
+.title {
+  border-radius: 10px;
   color: white;
-  background-color: #2d2020;
-  font-size: 25px; }
+  background: linear-gradient(180deg, #68b9c4 0%, #cc94ea 100%);
+  font-size: 20px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
 
 .sectionfavorites {
-  margin-right: 10px;
-  border: 1px solid #2d2020; }
+  width: 50%;
+  margin-right: 10px; }
 
 .favorites {
   margin: 0px;
@@ -96,6 +106,9 @@
   list-style: none; }
 
 .sectionsearch {
-  width: 70%; }
+  width: 50%; }
+
+.favimage {
+  position: relative; }
 
 /*# sourceMappingURL=main.css.map */

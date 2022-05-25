@@ -3,6 +3,7 @@
 .main {
   background-color: $color-gray;
 }
+
 .search {
   color: $color-aqua;
   margin: 20px 0px;
@@ -10,50 +11,52 @@
   font-size: 35px;
 }
 
-.image{
+.image {
   width: 100px;
 }
+
 .inputsearch {
+  display: flex;
   text-align: center;
-  font-size: 20px;
+  justify-content: center;
+  // font-size: 20px;
 }
 
 .input {
-  width: 280px;
   height: 30px;
   border: 2px solid $color-aqua;
   background-color: $color-gray;
-    font-size: 20px;
+  font-size: 20px;
+  width: 140px;
 }
 
 .button {
   background-color: $color-aqua;
   color: $color-white;
-  width: 100px;
+  width: 60px;
   padding: 5px;
   border: none;
   border-radius: 5px;
   margin-left: 10px;
-  font-size: 20px;
+  font-size: 15px;
 }
+
 .cocktailsfavorites {
   display: flex;
-  flex-direction: row;
-  width: 200px;
-  justify-content: space-around;
+  flex-direction: column-reverse;
+  align-items: center;
   margin: 10px 0px;
   font-size: 20px;
+  box-shadow: rgb(89, 214, 228) 0px 2px 4px 0px;
+
 }
 
 .listcocktails {
   display: flex;
+  justify-content: center;
   margin-top: 20px;
   text-align: center;
-}
-
-.titlesearch {
-  background-color: $color-white;
-  font-size: 25px;
+  width: 100%;
 }
 
 .listfavorites {
@@ -65,9 +68,14 @@
 .selecdelete {
   align-content: center;
   color: $color-white;
-  background-color: rgb(43, 40, 40);
+  background-color: red;
   border-radius: 90%;
+  width: 30px;
+  height: 30px;
   margin-block-end: auto;
+  position: absolute;
+  right: -6px;
+  top: -26px;
 }
 
 .selecfavo {
@@ -83,22 +91,32 @@
 }
 
 .cocktailssearch {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  border: $color-white solid 1px;
+  display: flex;
   margin: 0px;
   padding: 0px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.titlefav {
+.title {
+  border-radius: 10px;
   color: $color-white;
-  background-color: $color-black;
-  font-size: 25px;
+  background: linear-gradient(
+    180deg,
+    rgb(104, 185, 196) 0%,
+    rgb(204, 148, 234) 100%
+  );
+  font-size: 20px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .sectionfavorites {
+  width: 50%;
   margin-right: 10px;
-  border: 1px solid $color-black;
 }
 
 .favorites {
@@ -111,6 +129,10 @@
   list-style: none;
 }
 
-.sectionsearch{
-  width: 70%;
+.sectionsearch {
+  width: 50%;
+}
+
+.favimage {
+  position: relative;
 }
